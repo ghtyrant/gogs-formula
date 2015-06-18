@@ -1,2 +1,13 @@
-# gogs-formula
-Salt formula to install and manage Gogs git service
+Gogs
+=======
+
+Available states
+================
+
+.. contents::
+    :local:
+
+ ``gogs``
+ -----------
+
+ Install Gogs from the binary distribution and start it up.
