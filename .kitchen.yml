@@ -1,0 +1,12 @@
+---
+driver: docker
+driver_config:
+  use_sudo: false
+
+platforms:
+  - name: centos-6.6
+    driver_config:
+      dockerfile: Dockerfile
+
+suites:
+  - name: default
