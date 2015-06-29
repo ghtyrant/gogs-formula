@@ -3,6 +3,7 @@ GEM
   specs:
     kitchen-docker (2.1.0)
       test-kitchen (>= 1.0.0)
+    kitchen-salt (0.0.19)
     mixlib-shellout (2.1.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -21,6 +22,7 @@ PLATFORMS
 
 DEPENDENCIES
   kitchen-docker (~> 2.1.0)
+  kitchen-salt (~> 0.0.19)
   test-kitchen (~> 1.4.0)
 
 BUNDLED WITH

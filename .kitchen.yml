@@ -8,5 +8,13 @@ platforms:
     driver_config:
       dockerfile: Dockerfile
 
+provisioner:
+  name: salt_solo
+  formula: gogs
+  state_top:
+    base:
+      '*':
+        - gogs
+
 suites:
   - name: default
