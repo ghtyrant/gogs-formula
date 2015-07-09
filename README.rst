@@ -7,7 +7,7 @@ Available states
 .. contents::
     :local:
 
- ``gogs``
- -----------
+``gogs``
+-----------
 
- Install Gogs from the binary distribution and start it up.
+Install Gogs from the binary distribution and start it up.
