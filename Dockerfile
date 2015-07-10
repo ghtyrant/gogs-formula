@@ -1,5 +1,5 @@
 FROM centos:centos6
-RUN if [[ $http_proxy && ${http_proxy-x} ]]; then echo proxy=<%= ENV['http_proxy'] %> >> /etc/yum.conf; fi
+RUN if [[ -n "<%= ENV['http_proxy'] %>" ]]; then echo proxy=<%= ENV['http_proxy'] %> >> /etc/yum.conf; fi
 RUN yum clean all
 RUN yum install -y sudo openssh-server openssh-clients which curl
 RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
