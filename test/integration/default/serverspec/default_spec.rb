@@ -6,6 +6,27 @@ describe user('git') do
   it { should have_home_directory '/home/git' }
 end
 
+describe file('/home/git/gogs') do
+  it { should be_directory }
+  it { should be_mode 755 }
+  it { should be_owned_by 'git' }
+  it { should be_grouped_into 'git' }
+end
+
+describe file('/home/git/gogs/gogs') do
+  it { should be_file }
+  it { should be_mode 755 }
+  it { should be_owned_by 'git' }
+  it { should be_grouped_into 'git' }
+end
+
+describe file('/home/git/gogs/log') do
+  it { should be_directory }
+  it { should be_mode 755 }
+  it { should be_owned_by 'git' }
+  it { should be_grouped_into 'git' }
+end
+
 describe file('/etc/rc.d/init.d/gogs') do
   it { should be_mode 755 }
   it { should be_owned_by 'root' }
