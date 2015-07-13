@@ -1,3 +1,6 @@
+daemonize:
+  pkg.installed
+
 git:
   user.present
 
@@ -26,6 +29,12 @@ git:
     - group: git
 
 /etc/rc.d/init.d/gogs:
-  file.copy:
-    - source: /home/git/gogs/scripts/init/centos/gogs
+  file.managed:
+    - source: salt://gogs/files/init
+    - user: root
+    - group: root
     - mode: 755
+
+gogs:
+  service.running:
+    - enable: True
