@@ -38,3 +38,14 @@ git:
 gogs:
   service.running:
     - enable: True
+    - watch:
+      - file: /home/git/gogs/custom/conf/app.ini
+
+/home/git/gogs/custom/conf/app.ini:
+  file.managed:
+    - source: salt://gogs/files/app.ini
+    - user: git
+    - group: git
+    - mode: 644
+    - makedirs: True
+    - dir_mode: 755

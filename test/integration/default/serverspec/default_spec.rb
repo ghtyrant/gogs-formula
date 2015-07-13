@@ -52,3 +52,10 @@ end
 describe port(3000) do
   it { should be_listening.with('tcp') }
 end
+
+describe file('/home/git/gogs/custom/conf/app.ini') do
+  it { should be_mode 644 }
+  it { should be_owned_by 'git' }
+  it { should be_grouped_into 'git' }
+  its(:sha256sum) { should eq 'f1a6d5d2dbe602f6651ff4ffa3b87dfe424c14f209b42028f78c9d4ac4078b5b' }
+end
