@@ -1,8 +1,9 @@
 daemonize:
   pkg.installed
 
-git:
-  user.present
+gogs-user:
+  user.present:
+    - name: git
 
 /home/git/gogs:
   archive.extracted:
