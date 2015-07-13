@@ -1,0 +1,3 @@
+gogs:
+  ## Default values
+  host: localhost

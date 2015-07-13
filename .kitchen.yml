@@ -16,6 +16,18 @@ provisioner:
     base:
       '*':
         - gogs
+  pillars:
+    top.sls:
+      base:
+        '*':
+          - gogs
+    gogs.sls:
 
 suites:
   - name: default
+  - name: config
+    provisioner:
+      pillars:
+        gogs.sls:
+          gogs:
+            host: gogs.local

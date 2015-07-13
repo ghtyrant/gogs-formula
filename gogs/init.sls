@@ -44,6 +44,7 @@ gogs:
 /home/git/gogs/custom/conf/app.ini:
   file.managed:
     - source: salt://gogs/files/app.ini
+    - template: jinja
     - user: git
     - group: git
     - mode: 644
